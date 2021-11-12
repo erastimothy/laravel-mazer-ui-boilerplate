@@ -23,6 +23,8 @@ class HomeController extends Controller
      */
     public function index()
     {
+        toastr()->info('Are you the 6 fingered man?')->success('Have fun storming the castle!')->warning('doritos');
+
         return view('home');
     }
 }

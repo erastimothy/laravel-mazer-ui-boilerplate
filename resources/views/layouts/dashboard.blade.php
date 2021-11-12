@@ -18,6 +18,9 @@
     <link rel="stylesheet" href="{{ asset('assets/vendors/bootstrap-icons/bootstrap-icons.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/app.css') }}">
     <link rel="shortcut icon" href="{{ asset('assets/images/favicon.svg" type="image/x-icon') }}">
+    
+    @toastr_css
+    @stack('styles')
 </head>
 
 <body>
@@ -34,7 +37,7 @@
             </div>
 
             <footer >
-                <div class="footer clearfix mb-0 text-muted">
+                <div class="mx-5 footer clearfix mb-0 text-muted">
                     <div class="float-start">
                         <p>2021 &copy; Mazer</p>
                     </div>
@@ -46,7 +49,14 @@
     <script src="{{ asset('assets/vendors/perfect-scrollbar/perfect-scrollbar.min.js') }}"></script>
     <script src="{{ asset('assets/js/bootstrap.bundle.min.js') }}"></script>
     
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+
+    @toastr_js
+
     <script src="{{ asset('assets/js/mazer.js') }}"></script>
+    @stack('scripts')
+    @toastr_render
+
 </body>
 
 </html>
